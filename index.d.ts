@@ -1,6 +1,7 @@
 //Taken from https://github.com/vuematerial/vue-material/issues/662#issuecomment-308937275
 
-import {PluginFunction} from 'vue'
+import { PluginFunction } from 'vue'
+import _Vue from "vue"
 
 type ExportProperty
 	= 'install'
@@ -88,4 +89,8 @@ declare module 'vue/types/vue' {
 			setCurrentTheme(name: string): void
 		}
 	}
+
+	export function MdButton(Vue: typeof _Vue, options?: any): void
+	export function MdContent(Vue: typeof _Vue, options?: any): void
+	export function MdTabs(Vue: typeof _Vue, options?: any): void
 }
